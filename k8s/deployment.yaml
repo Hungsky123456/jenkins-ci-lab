@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-ci-app
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: sample-ci-app
+  template:
+    metadata:
+      labels:
+        app: sample-ci-app
+    spec:
+      containers:
+      - name: sample-ci-app
+        image: hungsky123456/sample-ci-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
