@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sample-ci-app
-        image: hungsky123456/sample-ci-app:2
+        image: hungsky123456/sample-ci-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
