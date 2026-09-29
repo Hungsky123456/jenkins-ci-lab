@@ -80,7 +80,7 @@ pipeline {
 
                     stage('Push Docker image') {
                         withCredentials([usernamePassword(
-                            credentialsId: 'dockerhub',
+                            credentialsId: 'docker-hub',
                             usernameVariable: 'DOCKERHUB_USERNAME',
                             passwordVariable: 'DOCKERHUB_TOKEN'
                         )]) {
